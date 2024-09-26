@@ -18,3 +18,13 @@ javascript:alert("Carregando Sobrescrita de Resposta...\n\nVersão: 1.1");let ho
 ```  
 
 ![khanthing](https://github.com/ilytobias/Khan-Destroyer/assets/165577429/7a77ee4e-8d84-4135-b97c-5408b16f780b)
+
+async function listaVideosApi() {
+    const conexao = await fetch("http://localhost:3000/videos");
+    const conexaoConvertida =  await conexao.json();
+
+    return conexaoConvertida;
+} 
+export const conectaApi = {
+    listaVideosApi
+}
